@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "comparison",
+    "name": "Comparison",
+    "description": "Side-by-side comparisons of Minoxidil against finasteride, nanoxidil, redensyl, rosemary oil, hair transplants, and more.",
+    "count": 400
+  },
+  {
+    "slug": "faq",
+    "name": "FAQ",
+    "description": "Clear, science-backed answers to the most frequently asked questions about Minoxidil safety, timelines, and daily use.",
+    "count": 236
+  },
+  {
+    "slug": "hair",
+    "name": "Hair",
+    "description": "Complete guides on scalp hair regrowth, Norwood scale stages, shedding phases, and maximizing hair density.",
+    "count": 161
+  },
+  {
+    "slug": "side-effects",
+    "name": "Side Effects",
+    "description": "Honest medical insights on managing dryness, shedding, irritation, and systemic side effects safely.",
+    "count": 131
+  },
+  {
+    "slug": "women",
+    "name": "Women",
+    "description": "Specialized guides on female pattern hair loss, hormonal thinning, hairline restoration, and safe dosages for women.",
+    "count": 129
+  },
+  {
+    "slug": "beard",
+    "name": "Beard",
+    "description": "Step-by-step routines to transform patchy facial hair into a thick, full beard using topical and cream-based Minoxidil.",
+    "count": 83
+  },
+  {
+    "slug": "usage",
+    "name": "Usage",
+    "description": "Best practices, dosage measurements, derma-rolling routines, and application techniques for optimal absorption.",
+    "count": 55
+  },
+  {
+    "slug": "reviews",
+    "name": "Reviews",
+    "description": "Unbiased reviews of the best Minoxidil brands, cream formulations, foams, and hair growth serums in the US.",
+    "count": 33
+  },
+  {
+    "slug": "science",
+    "name": "Science",
+    "description": "Deep dives into vasodilation, potassium channels, follicular cellular mechanisms, and clinical studies.",
+    "count": 24
+  }
+]
