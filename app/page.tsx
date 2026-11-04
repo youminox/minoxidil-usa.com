@@ -3,6 +3,7 @@ import ArticleCard from '@/components/ArticleCard';
 import SearchBar from '@/components/SearchBar';
 import InteractiveCategoryExplorer from '@/components/InteractiveCategoryExplorer';
 import YouMinoxSpotlight from '@/components/YouMinoxSpotlight';
+import AdSenseUnit from '@/components/AdSenseUnit';
 import { getAllPosts, getCategories, Post } from '@/lib/posts';
 
 const CATEGORY_META: Record<string, { icon: string; badge: string }> = {
@@ -202,6 +203,10 @@ export default function HomePage() {
             {editorsPicks.map((post, index) => (
               <ArticleCard key={post.slug} post={post} priority={index < 3} />
             ))}
+          </div>
+
+          <div className="mt-12">
+            <AdSenseUnit format="auto" minHeight="250px" />
           </div>
         </div>
       </section>

@@ -1,6 +1,16 @@
 {
   "redirects": [
     {
+      "source": "/wp-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap_index.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
       "source": "/category/:slug/",
       "destination": "/:slug/",
       "permanent": true
@@ -8,6 +18,776 @@
     {
       "source": "/category/:slug",
       "destination": "/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/is-it-normal-for-minoxidil-expiration/",
+      "destination": "/faq/is-it-normal-for-how-to-store-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/managing-minoxidil-shedding-phase/",
+      "destination": "/side-effects/what-to-do-about-minoxidil-shedding-phase/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/can-you-reduce-minoxidil-facial-swelling/",
+      "destination": "/side-effects/can-you-reduce-itchy-scalp-from-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/hair/how-long-does-how-often-to-apply-minoxidil/",
+      "destination": "/hair/how-long-does-how-to-apply-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/women/how-to-use-is-minoxidil-safe-for-women/",
+      "destination": "/women/best-way-to-apply-is-minoxidil-safe-for-women/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/risks-associated-with-long-term-minoxidil-use/",
+      "destination": "/side-effects/risks-associated-with-itchy-scalp-from-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/women/common-mistakes-with-minoxidil-for-womens-eyebrows/",
+      "destination": "/women/common-mistakes-with-minoxidil-for-postpartum-hair-loss/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/why-does-how-long-to-use-minoxidil/",
+      "destination": "/faq/where-to-apply-how-long-to-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/common-symptoms-of-itchy-scalp-from-minoxidil/",
+      "destination": "/side-effects/hidden-risks-of-itchy-scalp-from-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/usage/when-should-you-use-missed-minoxidil-dose/",
+      "destination": "/usage/how-often-should-you-use-using-minoxidil-once-a-day/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/safe-ways-to-use-minoxidil-facial-swelling/",
+      "destination": "/side-effects/safe-ways-to-use-scalp-irritation-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/usage/instructions-for-using-how-long-to-use-minoxidil/",
+      "destination": "/usage/what-to-avoid-when-using-how-long-to-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/what-to-do-if-how-long-to-use-minoxidil/",
+      "destination": "/faq/what-to-do-if-how-long-does-minoxidil-last/",
+      "permanent": true
+    },
+    {
+      "source": "/reviews/what-to-expect-from-kirkland-minoxidil-review/",
+      "destination": "/reviews/what-to-expect-from-minoxidil-results-review/",
+      "permanent": true
+    },
+    {
+      "source": "/women/best-way-to-apply-women-minoxidil-application-tips/",
+      "destination": "/women/best-way-to-apply-how-women-should-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/top-signs-of-minoxidil-shedding-phase/",
+      "destination": "/side-effects/top-signs-of-does-minoxidil-cause-hair-shedding/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/why-does-minoxidil-expiration/",
+      "destination": "/faq/why-does-minoxidil-and-other-hair-products/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/what-to-do-if-does-minoxidil-work/",
+      "destination": "/faq/what-to-do-if-how-long-does-minoxidil-last/",
+      "permanent": true
+    },
+    {
+      "source": "/reviews/complete-guide-to-minoxidil-before-and-after/",
+      "destination": "/reviews/complete-guide-to-minoxidil-usa-product-review/",
+      "permanent": true
+    },
+    {
+      "source": "/hair/daily-routine-for-minoxidil-shampoo/",
+      "destination": "/hair/daily-routine-for-how-often-to-apply-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/can-minoxidil-cause-how-long-does-minoxidil-last/",
+      "destination": "/faq/can-you-how-long-does-minoxidil-last/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/how-often-can-minoxidil-and-shampoo-use/",
+      "destination": "/faq/how-often-can-how-long-to-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/women/hair-care-routine-with-minoxidil-for-postpartum-hair-loss/",
+      "destination": "/women/hair-care-routine-with-minoxidil-for-women/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/common-symptoms-of-scalp-irritation-minoxidil/",
+      "destination": "/side-effects/common-symptoms-of-minoxidil-and-dry-skin/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/expert-advice-on-itchy-scalp-from-minoxidil/",
+      "destination": "/side-effects/expert-advice-on-scalp-redness-from-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/hair/should-you-use-hair-regrowth-tips/",
+      "destination": "/hair/should-you-use-hair-thickening-products/",
+      "permanent": true
+    },
+    {
+      "source": "/women/can-you-use-minoxidil-for-female-pattern-baldness/",
+      "destination": "/women/how-to-use-minoxidil-for-female-pattern-baldness/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/risks-associated-with-minoxidil-facial-swelling/",
+      "destination": "/side-effects/risks-associated-with-itchy-scalp-from-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/how-long-should-minoxidil-and-shampoo-use/",
+      "destination": "/faq/should-you-minoxidil-and-shampoo-use/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/should-minoxidil-be-how-long-to-use-minoxidil/",
+      "destination": "/faq/how-long-should-how-long-to-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/is-it-okay-to-minoxidil-usage-frequency/",
+      "destination": "/faq/is-it-necessary-to-minoxidil-usage-frequency/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/can-you-avoid-scalp-irritation-minoxidil/",
+      "destination": "/side-effects/can-you-reduce-itchy-scalp-from-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/author/charlie-lingan/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/women/what-women-should-know-about-minoxidil-eyebrow-regrowth-women/",
+      "destination": "/women/what-women-should-know-about-minoxidil-for-hair-regrowth-women/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/can-i-mix-how-long-does-minoxidil-last/",
+      "destination": "/faq/can-you-how-long-does-minoxidil-last/",
+      "permanent": true
+    },
+    {
+      "source": "/reviews/best-minoxidil-for-men-reviews/",
+      "destination": "/reviews/pros-and-cons-of-minoxidil-for-men-reviews/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/common-symptoms-of-does-minoxidil-cause-hair-shedding/",
+      "destination": "/side-effects/top-signs-of-does-minoxidil-cause-hair-shedding/",
+      "permanent": true
+    },
+    {
+      "source": "/reviews/expert-opinion-on-kirkland-minoxidil-review/",
+      "destination": "/reviews/expert-opinion-on-top-rated-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/step-by-step-guide-to-minoxidil-beard-side-effects/",
+      "destination": "/beard/step-by-step-guide-to-thicker-beard-with-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/how-to-use-minoxidil-for-beard/",
+      "destination": "/beard/how-to-use-minoxidil-patchy-beard/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/should-minoxidil-be-how-long-does-minoxidil-last/",
+      "destination": "/faq/should-you-how-long-does-minoxidil-last/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/do-you-need-what-happens-after-stopping-minoxidil/",
+      "destination": "/faq/should-you-what-happens-after-stopping-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/usage/should-you-apply-minoxidil-usage-frequency/",
+      "destination": "/usage/can-you-skip-minoxidil-usage-frequency/",
+      "permanent": true
+    },
+    {
+      "source": "/hair/how-to-use-best-way-to-use-minoxidil/",
+      "destination": "/hair/does-best-way-to-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/how-long-does-minoxidil-beard-success-stories/",
+      "destination": "/beard/how-long-does-beard-growth-using-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/important-facts-about-itchy-scalp-from-minoxidil/",
+      "destination": "/side-effects/can-you-reduce-itchy-scalp-from-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/top-signs-of-minoxidil-facial-swelling/",
+      "destination": "/side-effects/top-signs-of-minoxidil-on-sensitive-skin/",
+      "permanent": true
+    },
+    {
+      "source": "/hair/how-long-does-minoxidil-for-hair-growth/",
+      "destination": "/hair/advanced-techniques-for-how-long-does-minoxidil-take/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/how-long-does-beard-oil-with-minoxidil/",
+      "destination": "/beard/how-long-does-thicker-beard-with-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/common-symptoms-of-scalp-redness-from-minoxidil/",
+      "destination": "/side-effects/side-effects-of-using-scalp-redness-from-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/when-to-can-you-use-minoxidil/",
+      "destination": "/faq/can-you-how-long-to-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/women/complete-guide-to-minoxidil-side-effects-in-women/",
+      "destination": "/women/best-way-to-apply-minoxidil-side-effects-in-women/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/side-effects-of-minoxidil-beard-side-effects/",
+      "destination": "/beard/side-effects-of-minoxidil-beard-success-stories/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/what-happens-after-using-stopping-minoxidil-beard/",
+      "destination": "/beard/what-happens-after-using-minoxidil-beard-side-effects/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/common-symptoms-of-minoxidil-chest-pain/",
+      "destination": "/side-effects/common-symptoms-of-minoxidil-and-dry-skin/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/what-to-do-if-is-minoxidil-safe/",
+      "destination": "/faq/what-to-do-if-how-to-store-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/where-to-apply-does-minoxidil-work/",
+      "destination": "/faq/where-to-apply-how-long-does-minoxidil-last/",
+      "permanent": true
+    },
+    {
+      "source": "/reviews/everything-you-need-to-know-about-minoxidil-liquid-review/",
+      "destination": "/reviews/everything-you-need-to-know-about-honest-minoxidil-feedback/",
+      "permanent": true
+    },
+    {
+      "source": "/science/scientific-explanation-of-minoxidil-absorption-in-scalp/",
+      "destination": "/science/breakdown-of-minoxidil-absorption-in-scalp/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/does-how-long-to-use-minoxidil/",
+      "destination": "/faq/where-to-apply-how-long-to-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/how-often-can-is-minoxidil-safe/",
+      "destination": "/faq/how-often-can-how-long-to-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/does-minoxidil-expiration/",
+      "destination": "/faq/can-you-minoxidil-expiration/",
+      "permanent": true
+    },
+    {
+      "source": "/hair/hair-regrowth-with-how-to-apply-minoxidil/",
+      "destination": "/hair/common-mistakes-with-how-often-to-apply-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/hidden-risks-of-dizziness-after-using-minoxidil/",
+      "destination": "/side-effects/risks-associated-with-dizziness-after-using-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/side-effects-of-using-scalp-irritation-minoxidil/",
+      "destination": "/side-effects/side-effects-of-using-scalp-redness-from-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/hair/should-you-use-best-minoxidil-foam/",
+      "destination": "/hair/should-you-use-minoxidil-liquid-vs-foam/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/beginners-guide-to-minoxidil-patchy-beard/",
+      "destination": "/beard/step-by-step-guide-to-minoxidil-beard-for-beginners/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/can-you-combine-how-long-to-use-minoxidil/",
+      "destination": "/faq/can-you-how-long-to-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/can-you-reduce-does-minoxidil-cause-hair-shedding/",
+      "destination": "/side-effects/risks-associated-with-does-minoxidil-cause-hair-shedding/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/is-it-necessary-to-how-long-does-minoxidil-last/",
+      "destination": "/faq/is-it-okay-to-how-long-does-minoxidil-last/",
+      "permanent": true
+    },
+    {
+      "source": "/women/can-you-use-minoxidil-for-hair-regrowth-women/",
+      "destination": "/women/can-you-use-minoxidil-for-thinning-hair-women/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/complete-guide-to-minoxidil-facial-swelling/",
+      "destination": "/side-effects/beginners-guide-to-minoxidil-facial-swelling/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/can-beard-care-routine/",
+      "destination": "/beard/what-happens-after-using-beard-care-routine/",
+      "permanent": true
+    },
+    {
+      "source": "/reviews/what-users-say-about-kirkland-minoxidil-review/",
+      "destination": "/reviews/what-to-expect-from-minoxidil-results-review/",
+      "permanent": true
+    },
+    {
+      "source": "/women/top-tips-for-best-minoxidil-for-women/",
+      "destination": "/women/top-tips-for-minoxidil-for-hair-regrowth-women/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/top-tips-for-minoxidil-beard-for-beginners/",
+      "destination": "/beard/top-tips-for-minoxidil-beard-results/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/how-often-can-what-happens-after-stopping-minoxidil/",
+      "destination": "/faq/can-you-what-happens-after-stopping-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/do-you-need-minoxidil-and-shampoo-use/",
+      "destination": "/faq/do-you-need-can-women-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/what-to-do-about-minoxidil-allergic-reaction/",
+      "destination": "/side-effects/what-to-do-about-can-minoxidil-cause-rashes/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/beginners-guide-to-stopping-minoxidil-beard/",
+      "destination": "/beard/complete-guide-to-stopping-minoxidil-beard/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/safe-ways-to-use-minoxidil-headaches/",
+      "destination": "/side-effects/safe-ways-to-use-scalp-irritation-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/can-you-minoxidil-dosage-questions/",
+      "destination": "/faq/can-minoxidil-cause-minoxidil-dosage-questions/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/what-to-do-if-minoxidil-usage-frequency/",
+      "destination": "/faq/what-to-do-if-how-to-store-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/why-does-minoxidil-dosage-questions/",
+      "destination": "/faq/does-minoxidil-dosage-questions/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/risks-associated-with-can-minoxidil-cause-rashes/",
+      "destination": "/side-effects/risks-associated-with-does-minoxidil-cause-hair-shedding/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/things-to-avoid-with-minoxidil-for-beard/",
+      "destination": "/beard/things-to-avoid-with-applying-minoxidil-on-beard/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/can-you-avoid-minoxidil-and-acne/",
+      "destination": "/side-effects/can-you-reduce-minoxidil-and-acne/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/is-it-normal-for-what-happens-after-stopping-minoxidil/",
+      "destination": "/faq/is-it-necessary-to-what-happens-after-stopping-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/how-long-does-stopping-minoxidil-beard/",
+      "destination": "/beard/how-long-does-beard-growth-using-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/hair/when-to-apply-minoxidil-for-hair-growth/",
+      "destination": "/hair/when-to-apply-minoxidil-for-men/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/how-to-treat-minoxidil-and-acne/",
+      "destination": "/side-effects/how-to-treat-minoxidil-and-heart-rate/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/top-tips-for-how-long-does-beard-growth-take/",
+      "destination": "/beard/beginners-guide-to-how-long-does-beard-growth-take/",
+      "permanent": true
+    },
+    {
+      "source": "/women/what-happens-if-2-vs-5-minoxidil-for-women/",
+      "destination": "/women/what-women-should-know-about-2-vs-5-minoxidil-for-women/",
+      "permanent": true
+    },
+    {
+      "source": "/women/why-choose-minoxidil-female-dosage/",
+      "destination": "/women/why-choose-female-minoxidil-results/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/when-to-what-age-to-start-minoxidil/",
+      "destination": "/faq/where-to-apply-what-age-to-start-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/do-you-need-can-you-stop-minoxidil/",
+      "destination": "/faq/do-you-need-can-women-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/hair/can-i-combine-best-way-to-use-minoxidil/",
+      "destination": "/hair/can-best-way-to-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/when-to-stop-using-dizziness-after-using-minoxidil/",
+      "destination": "/side-effects/how-to-cope-with-dizziness-after-using-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/does-what-age-to-start-minoxidil/",
+      "destination": "/faq/where-to-apply-what-age-to-start-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/reviews/pros-and-cons-of-minoxidil-side-effects-review/",
+      "destination": "/reviews/pros-and-cons-of-minoxidil-liquid-review/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/is-it-normal-for-how-long-does-minoxidil-last/",
+      "destination": "/faq/is-it-okay-to-how-long-does-minoxidil-last/",
+      "permanent": true
+    },
+    {
+      "source": "/women/can-you-use-minoxidil-female-dosage/",
+      "destination": "/women/can-you-use-long-term-minoxidil-use-in-women/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/managing-minoxidil-chest-pain/",
+      "destination": "/side-effects/understanding-minoxidil-chest-pain/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/things-to-avoid-with-beard-growth-using-minoxidil/",
+      "destination": "/beard/things-to-avoid-with-applying-minoxidil-on-beard/",
+      "permanent": true
+    },
+    {
+      "source": "/usage/complete-guide-to-minoxidil-dosage-instructions/",
+      "destination": "/usage/complete-guide-to-minoxidil-daily-routine/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/what-to-do-if-can-minoxidil-be-used-on-beard/",
+      "destination": "/faq/what-to-do-if-can-minoxidil-be-used-with-derma-roller/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/where-to-apply-can-women-use-minoxidil/",
+      "destination": "/faq/where-to-apply-can-you-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/complete-guide-to-minoxidil-side-effects-male-female/",
+      "destination": "/side-effects/beginners-guide-to-minoxidil-side-effects-male-female/",
+      "permanent": true
+    },
+    {
+      "source": "/hair/when-to-apply-how-long-does-minoxidil-take/",
+      "destination": "/hair/ultimate-guide-to-how-long-does-minoxidil-take/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/how-long-does-growing-full-beard-fast/",
+      "destination": "/beard/how-to-fix-growing-full-beard-fast/",
+      "permanent": true
+    },
+    {
+      "source": "/women/can-you-use-how-women-should-use-minoxidil/",
+      "destination": "/women/can-you-use-long-term-minoxidil-use-in-women/",
+      "permanent": true
+    },
+    {
+      "source": "/science/understanding-does-minoxidil-increase-hair-density/",
+      "destination": "/science/evidence-for-does-minoxidil-increase-hair-density/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/can-you-avoid-minoxidil-and-dry-skin/",
+      "destination": "/side-effects/common-symptoms-of-minoxidil-and-dry-skin/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/side-effects-of-using-minoxidil-chest-pain/",
+      "destination": "/side-effects/side-effects-of-using-minoxidil-side-effects/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/complete-guide-to-minoxidil-and-dry-skin/",
+      "destination": "/side-effects/beginners-guide-to-minoxidil-and-dry-skin/",
+      "permanent": true
+    },
+    {
+      "source": "/hair/how-to-use-minoxidil-for-hair-growth/",
+      "destination": "/hair/how-to-use-minoxidil-for-women/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/what-is-can-you-use-minoxidil/",
+      "destination": "/faq/what-is-can-women-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/why-does-minoxidil-prescription-needed/",
+      "destination": "/faq/does-minoxidil-prescription-needed/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/how-long-should-minoxidil-prescription-needed/",
+      "destination": "/faq/how-often-can-minoxidil-prescription-needed/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/is-it-okay-to-how-long-to-use-minoxidil/",
+      "destination": "/faq/is-it-okay-to-how-long-does-minoxidil-last/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/best-minoxidil-beard-before-after/",
+      "destination": "/beard/when-to-apply-minoxidil-beard-before-after/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/when-to-can-minoxidil-be-used-on-beard/",
+      "destination": "/faq/is-it-necessary-to-can-minoxidil-be-used-on-beard/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/does-can-you-use-minoxidil/",
+      "destination": "/faq/why-does-can-you-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/where-to-apply-is-minoxidil-safe/",
+      "destination": "/faq/where-to-apply-how-long-to-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/is-it-necessary-to-how-long-to-use-minoxidil/",
+      "destination": "/faq/what-is-how-long-to-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/can-you-can-you-stop-minoxidil/",
+      "destination": "/faq/will-minoxidil-can-you-stop-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/women/when-should-minoxidil-for-postpartum-hair-loss/",
+      "destination": "/women/when-should-minoxidil-for-thinning-hair-women/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/when-to-stop-using-can-minoxidil-cause-rashes/",
+      "destination": "/side-effects/when-to-stop-using-minoxidil-and-acne/",
+      "permanent": true
+    },
+    {
+      "source": "/hair/common-mistakes-with-how-to-apply-minoxidil/",
+      "destination": "/hair/common-mistakes-with-how-often-to-apply-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/usage/should-you-apply-how-long-to-use-minoxidil/",
+      "destination": "/usage/should-you-apply-how-to-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/how-to-cope-with-is-minoxidil-safe/",
+      "destination": "/side-effects/how-to-cope-with-dizziness-after-using-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/what-to-do-about-long-term-minoxidil-use/",
+      "destination": "/side-effects/how-to-treat-long-term-minoxidil-use/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/what-is-what-age-to-start-minoxidil/",
+      "destination": "/faq/is-it-necessary-to-what-age-to-start-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/usage/best-way-to-apply-how-to-get-better-results-with-minoxidil/",
+      "destination": "/usage/mistakes-to-avoid-with-how-to-get-better-results-with-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/can-you-combine-how-to-store-minoxidil/",
+      "destination": "/faq/can-you-how-to-store-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/hair/when-to-apply-hair-thickening-products/",
+      "destination": "/hair/when-to-apply-hair-regrowth-tips/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/when-to-apply-beard-maintenance-tips/",
+      "destination": "/beard/when-to-apply-minoxidil-beard-before-after/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/common-mistakes-with-minoxidil-for-beard/",
+      "destination": "/beard/common-mistakes-with-minoxidil-beard-for-beginners/",
+      "permanent": true
+    },
+    {
+      "source": "/hair/hair-regrowth-with-how-long-does-minoxidil-take/",
+      "destination": "/hair/ultimate-guide-to-how-long-does-minoxidil-take/",
+      "permanent": true
+    },
+    {
+      "source": "/women/can-you-use-minoxidil-side-effects-in-women/",
+      "destination": "/women/can-you-use-long-term-minoxidil-use-in-women/",
+      "permanent": true
+    },
+    {
+      "source": "/hair/should-you-use-best-way-to-use-minoxidil/",
+      "destination": "/hair/does-best-way-to-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/hair/best-minoxidil-results/",
+      "destination": "/hair/beginners-guide-to-best-minoxidil-foam/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/is-it-okay-to-can-you-use-minoxidil/",
+      "destination": "/faq/is-it-necessary-to-can-you-use-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/how-to-cope-with-minoxidil-and-acne/",
+      "destination": "/side-effects/how-to-cope-with-minoxidil-and-dry-skin/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/top-signs-of-can-minoxidil-cause-rashes/",
+      "destination": "/side-effects/side-effects-of-using-can-minoxidil-cause-rashes/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/will-minoxidil-minoxidil-expiration/",
+      "destination": "/faq/can-you-minoxidil-expiration/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/can-you-combine-what-happens-after-stopping-minoxidil/",
+      "destination": "/faq/can-you-what-happens-after-stopping-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/top-tips-for-minoxidil-patchy-beard/",
+      "destination": "/beard/top-tips-for-minoxidil-beard-results/",
+      "permanent": true
+    },
+    {
+      "source": "/women/what-women-should-know-about-minoxidil-side-effects-in-women/",
+      "destination": "/women/what-women-should-know-about-minoxidil-for-hair-regrowth-women/",
+      "permanent": true
+    },
+    {
+      "source": "/beard/complete-guide-to-minoxidil-beard-for-beginners/",
+      "destination": "/beard/step-by-step-guide-to-minoxidil-beard-for-beginners/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/complete-guide-to-dizziness-after-using-minoxidil/",
+      "destination": "/side-effects/how-to-cope-with-dizziness-after-using-minoxidil/",
+      "permanent": true
+    },
+    {
+      "source": "/side-effects/risks-associated-with-minoxidil-side-effects-male-female/",
+      "destination": "/side-effects/how-to-cope-with-minoxidil-side-effects-male-female/",
+      "permanent": true
+    },
+    {
+      "source": "/usage/best-way-to-apply-how-to-combine-minoxidil-with-other-products/",
+      "destination": "/usage/what-to-avoid-when-using-how-to-combine-minoxidil-with-other-products/",
+      "permanent": true
+    },
+    {
+      "source": "/reviews/customer-feedback-on-user-experience-minoxidil/",
+      "destination": "/reviews/customer-feedback-on-minoxidil-for-men-reviews/",
       "permanent": true
     }
   ],
