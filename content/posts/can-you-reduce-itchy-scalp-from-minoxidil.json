@@ -34,6 +34,45 @@
     {
       "question": "Why Does Minoxidil Cause Itchy Scalp?",
       "answer": "The primary reason for an itchy scalp when using minoxidil is the presence of certain formulation ingredients. Alcohol , used to dissolve minoxidil, can dry out the scalp, while propylene glycol helps the solution penetrate the skin but may cause irritation for some individuals. Additionally, the process of increased hair shedding at the beginning of treatment can also contribu"
+    },
+    {
+      "question": "Why does Minoxidil sometimes cause headaches or a fast heart rate?",
+      "answer": "Minoxidil was originally developed as a potassium-channel vasodilator. If applied to a wet scalp, after aggressive microneedling, or in doses exceeding 1 mL, excess medication enters the bloodstream and temporarily lowers blood pressure, triggering reflex tachycardia or a mild headache."
     }
-  ]
+  ],
+  "gscImpressions": 106,
+  "gscClicks": 1,
+  "isPowerPage": false,
+  "seoTitle": "How to Effectively Reduce Itchy Scalp from Minoxidil: Expert Tips and Solutions (Causes, Prevention & When to Stop)",
+  "quickAnswer": "Mild headaches or temporary shedding during weeks 2–6 can occur as Minoxidil dilates blood vessels and synchronizes hair follicles into a fresh growth cycle. However, systemic symptoms like rapid heart rate (tachycardia), dizziness, or chest pain usually result from over-applying (>1 mL), applying to wet/broken skin, or high systemic sensitivity—and require immediate dose reduction or medical evaluation.",
+  "clinicalTable": {
+    "title": "Minoxidil Side Effects: Normal Adjustment vs. Systemic Over-Absorption",
+    "headers": [
+      "Symptom",
+      "Typical Onset",
+      "Recommended Clinical Action"
+    ],
+    "rows": [
+      [
+        "Temporary Hair Shedding",
+        "Weeks 2 – 6 of Treatment",
+        "Normal Follicular Renewal — Continue Use"
+      ],
+      [
+        "Scalp Itching / Dry Flakes",
+        "Weeks 1 – 4 (Propylene Glycol)",
+        "Switch to Propylene-Glycol-Free Cream (You Minox)"
+      ],
+      [
+        "Mild Vasodilation Headache",
+        "First 7 – 14 Days",
+        "Ensure Dry Scalp & Strict 1 mL Dose"
+      ],
+      [
+        "Rapid Heart Rate / Chest Pain",
+        "Anytime (Systemic Uptake)",
+        "Wash Off Area & Consult Physician Immediately"
+      ]
+    ]
+  }
 }

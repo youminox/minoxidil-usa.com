@@ -38,6 +38,45 @@
     {
       "question": "How Long Does the Shedding Phase Last?",
       "answer": "Typically, the hair shedding phase lasts for about two to eight weeks. This duration can vary depending on individual response to the treatment. Its crucial to remain patient and continue using Minoxidil as directed during this period. Discontinuing use prematurely can halt progress and prevent you from seeing the full benefits of the treatment. Consistency is key, and its impo"
+    },
+    {
+      "question": "Why does Minoxidil sometimes cause headaches or a fast heart rate?",
+      "answer": "Minoxidil was originally developed as a potassium-channel vasodilator. If applied to a wet scalp, after aggressive microneedling, or in doses exceeding 1 mL, excess medication enters the bloodstream and temporarily lowers blood pressure, triggering reflex tachycardia or a mild headache."
     }
-  ]
+  ],
+  "gscImpressions": 864,
+  "gscClicks": 0,
+  "isPowerPage": true,
+  "seoTitle": "What Studies Reveal About Minoxidil and the Hair Shedding Phase (Causes, Prevention & When to Stop)",
+  "quickAnswer": "Mild headaches or temporary shedding during weeks 2–6 can occur as Minoxidil dilates blood vessels and synchronizes hair follicles into a fresh growth cycle. However, systemic symptoms like rapid heart rate (tachycardia), dizziness, or chest pain usually result from over-applying (>1 mL), applying to wet/broken skin, or high systemic sensitivity—and require immediate dose reduction or medical evaluation.",
+  "clinicalTable": {
+    "title": "Minoxidil Side Effects: Normal Adjustment vs. Systemic Over-Absorption",
+    "headers": [
+      "Symptom",
+      "Typical Onset",
+      "Recommended Clinical Action"
+    ],
+    "rows": [
+      [
+        "Temporary Hair Shedding",
+        "Weeks 2 – 6 of Treatment",
+        "Normal Follicular Renewal — Continue Use"
+      ],
+      [
+        "Scalp Itching / Dry Flakes",
+        "Weeks 1 – 4 (Propylene Glycol)",
+        "Switch to Propylene-Glycol-Free Cream (You Minox)"
+      ],
+      [
+        "Mild Vasodilation Headache",
+        "First 7 – 14 Days",
+        "Ensure Dry Scalp & Strict 1 mL Dose"
+      ],
+      [
+        "Rapid Heart Rate / Chest Pain",
+        "Anytime (Systemic Uptake)",
+        "Wash Off Area & Consult Physician Immediately"
+      ]
+    ]
+  }
 }

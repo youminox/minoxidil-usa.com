@@ -23,6 +23,13 @@ export default function HomePage() {
   const categories = getCategories();
 
   const editorsPicks = posts.slice(0, 6);
+  const topGscPowerPages = [...posts]
+    .sort((a: any, b: any) => {
+      const scoreA = (a.gscClicks || 0) * 100 + (a.gscImpressions || 0);
+      const scoreB = (b.gscClicks || 0) * 100 + (b.gscImpressions || 0);
+      return scoreB - scoreA;
+    })
+    .slice(0, 12);
   const beardGuides = posts.filter((p) => p.category === 'beard').slice(0, 4);
   const hairAndWomenGuides = posts
     .filter((p) => p.category === 'hair' || p.category === 'women')
@@ -219,6 +226,50 @@ export default function HomePage() {
         categories={categories}
         postsByCategory={postsByCategory}
       />
+
+      {/* Top Searched Clinical Questions in the USA (Direct Root-Domain Internal Links to Top GSC Power Pages) */}
+      <section className="py-16 px-4 bg-white border-b border-slate-200/70">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 mb-3">
+                🇺🇸 Most Searched in the USA
+              </span>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+                Trending Clinical Questions &amp; Comparison Guides
+              </h2>
+            </div>
+            <Link
+              href="/faq/"
+              className="inline-flex items-center gap-1.5 text-primary-700 font-bold hover:text-primary-900 transition-colors"
+            >
+              Browse All 275+ FAQ Guides &rarr;
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {topGscPowerPages.map((pp: any, idx: number) => (
+              <Link
+                key={pp.slug}
+                href={`/${pp.category}/${pp.slug}/`}
+                className="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-50 hover:bg-primary-50/70 border border-slate-200/80 hover:border-primary-300 transition-all group"
+              >
+                <span className="w-7 h-7 rounded-lg bg-primary-600 text-white font-extrabold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                  {idx + 1}
+                </span>
+                <div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-primary-700 block mb-0.5">
+                    {pp.categoryName}
+                  </span>
+                  <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-primary-800 leading-snug line-clamp-2">
+                    {pp.title}
+                  </h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* All 9 Categories Grid */}
       <section className="py-20 px-4 bg-slate-50 border-b border-slate-200/70">

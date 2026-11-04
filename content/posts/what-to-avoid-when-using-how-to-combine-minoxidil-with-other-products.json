@@ -34,6 +34,53 @@
     {
       "question": "How to Use Minoxidil?",
       "answer": "Applying minoxidil correctly is crucial for achieving optimal results. Typically available in liquid or foam form, the solution should be applied directly to the scalp, not the hair. Users are generally advised to apply it twice daily, once in the morning and once at night. Its important to follow the products instructions carefully, ensuring the scalp is dry before application"
+    },
+    {
+      "question": "When can I sleep after applying Minoxidil at night?",
+      "answer": "Wait at least 45 to 60 minutes after applying Minoxidil before going to bed. Cream-based formulas like You Minox absorb faster than greasy propylene-glycol liquids, reducing pillowcase transfer."
+    },
+    {
+      "question": "How long after applying Minoxidil can I shower or wash my hair?",
+      "answer": "Clinical absorption studies show that approximately 50% of topical Minoxidil absorbs within 1 hour and over 75% absorbs within 4 hours. Always wait at least 4 hours before showering or shampooing."
+    },
+    {
+      "question": "Should I apply Minoxidil before or after a shower?",
+      "answer": "Always apply Minoxidil after your shower once your hair and scalp are completely dry. Applying before a shower washes away the medication before it can penetrate the hair follicles."
     }
-  ]
+  ],
+  "gscImpressions": 1816,
+  "gscClicks": 6,
+  "isPowerPage": true,
+  "seoTitle": "How to Combine Minoxidil with Other Products: Key Mistakes to Avoid (Wait Times, Shower & Sleep Rules)",
+  "quickAnswer": " Always apply Minoxidil to a completely dry scalp or face after showering, and wait at least 4 hours before shampooing, swimming, or sweating heavily so over 75% of the active ingredient absorbs. Wait 20–30 minutes before applying styling products or moisturizers, and allow 45–60 minutes before sleeping so Minoxidil does not transfer to your pillowcase.",
+  "clinicalTable": {
+    "title": "Clinical Wait-Time Schedule After Applying Minoxidil",
+    "headers": [
+      "Daily Activity / Product",
+      "Minimum Wait Time",
+      "Why It Matters"
+    ],
+    "rows": [
+      [
+        "Applying Moisturizer / Styling Gel",
+        "20 – 30 Minutes",
+        "Prevents Dilution of Follicular Absorption"
+      ],
+      [
+        "Going to Sleep / Pillow Contact",
+        "45 – 60 Minutes",
+        "Prevents Facial Transfer & Unwanted Hair"
+      ],
+      [
+        "Showering / Shampooing Hair",
+        "4 Hours (Ideal) / 2 Hours (Min)",
+        "Ensures >75% Transfollicular Uptake"
+      ],
+      [
+        "Applying Minoxidil After Shower",
+        "Wait Until Scalp is 100% Dry",
+        "Wet Skin Increases Systemic Irritation"
+      ]
+    ]
+  }
 }

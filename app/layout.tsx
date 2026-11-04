@@ -53,6 +53,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  other: {
+    'google-adsense-account': 'ca-pub-1070738569472471',
+  },
 };
 
 export default function RootLayout({
@@ -63,6 +66,7 @@ export default function RootLayout({
   return (
     <html lang="en-US" className={`${inter.variable} ${outfit.variable}`}>
       <head>
+        <meta name="google-adsense-account" content="ca-pub-1070738569472471" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net" />
         <script

@@ -34,6 +34,49 @@
     {
       "question": "How Minoxidil Works?",
       "answer": "The mechanism by which minoxidil promotes hair growth involves the widening of blood vessels, which enhances circulation to hair follicles. This increased blood flow helps to revitalize shrunken hair follicles, extending their growth phase and increasing hair density. The topical application of minoxidil is typically available in liquid or foam forms, with concentrations rangin"
+    },
+    {
+      "question": "Does expired Minoxidil cause hair loss or shedding?",
+      "answer": "Expired Minoxidil does not directly damage hair follicles, but because its active concentration drops below the therapeutic threshold, minoxidil-dependent hairs can re-enter the telogen resting phase and shed."
+    },
+    {
+      "question": "How long does an opened bottle of Minoxidil last?",
+      "answer": "A standard 60 mL bottle of Minoxidil is designed for a 30-day supply at 1 mL twice daily, but remains chemically stable for up to 12 months after opening if the cap is tightly sealed."
     }
-  ]
+  ],
+  "gscImpressions": 408,
+  "gscClicks": 0,
+  "isPowerPage": false,
+  "seoTitle": "Can Minoxidil Expire? (Shelf Life & Safety Guide 2026)",
+  "quickAnswer": "Unopened Minoxidil typically lasts 2 to 3 years from the manufacturing date, while an opened bottle remains fully effective for 6 to 12 months when kept sealed at room temperature. Using expired Minoxidil is rarely dangerous, but oxidized active molecules lose 30%–60% of their vasodilating potency, which can trigger premature hair shedding.",
+  "clinicalTable": {
+    "title": "Minoxidil Expiration & Potency Timeline",
+    "headers": [
+      "Time Past Expiration",
+      "Estimated Potency",
+      "Dermatologist Recommendation"
+    ],
+    "rows": [
+      [
+        "Unopened (Before Exp. Date)",
+        "100% Clinical Strength",
+        "Safe for Daily Use"
+      ],
+      [
+        "1 – 3 Months Past Expiration",
+        "85% – 90% Potency",
+        "Acceptable Only if Clear & Odorless"
+      ],
+      [
+        "3 – 6 Months Past Expiration",
+        "60% – 75% Potency",
+        "Replace Bottle to Prevent Shedding"
+      ],
+      [
+        "Over 6 Months Expired / Yellowed",
+        "< 50% Potency (Oxidized)",
+        "Discard Immediately & Replace"
+      ]
+    ]
+  }
 }

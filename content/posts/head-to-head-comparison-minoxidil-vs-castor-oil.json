@@ -14,5 +14,49 @@
       "text": "Head-to-head comparison: Minoxidil vs castor oil"
     }
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "Can you use Minoxidil and castor oil together for beard or hair growth?",
+      "answer": "Yes. Apply 5% Minoxidil first to clean, dry skin, wait 30 to 45 minutes for complete absorption, and then apply a light layer of cold-pressed castor oil or use a cream-based Minoxidil that already hydrates the skin."
+    },
+    {
+      "question": "Does castor oil block Minoxidil absorption if applied first?",
+      "answer": "Yes. Heavy oils create an occlusive film over the stratum corneum that prevents water- and alcohol-soluble Minoxidil from penetrating the hair follicle. Never apply oils before Minoxidil."
+    }
+  ],
+  "gscImpressions": 162,
+  "gscClicks": 0,
+  "isPowerPage": false,
+  "seoTitle": "Minoxidil vs Castor Oil: Ultimate Head-to-Head Comparison Guide (Clinical Comparison & Layering Guide)",
+  "quickAnswer": "Minoxidil is the only FDA-approved topical vasodilator clinically proven to extend the anagen growth phase and reactivate dormant hair and beard follicles. While castor oil, rosemary oil, and peptide growth serums improve hair shaft hydration and scalp circulation, they work best as complementary moisturizers applied 30–45 minutes after Minoxidil.",
+  "clinicalTable": {
+    "title": "Minoxidil vs. Castor Oil & Botanical Growth Serums",
+    "headers": [
+      "Feature / Mechanism",
+      "5% Minoxidil (You Minox)",
+      "Castor Oil / Hair Serums"
+    ],
+    "rows": [
+      [
+        "FDA Clinical Approval",
+        "Yes (Proven Follicular Regrowth)",
+        "No (Cosmetic Conditioning Only)"
+      ],
+      [
+        "Primary Mechanism",
+        "ATP Potassium Channel Vasodilator",
+        "Ricinoleic Acid Moisture Barrier"
+      ],
+      [
+        "Reactivates Vellus Hair",
+        "Yes (Scalp & Beard Terminalization)",
+        "Minimal Without Minoxidil"
+      ],
+      [
+        "Best Layering Protocol",
+        "Apply First on Clean, Dry Skin",
+        "Apply 30–45 Mins After Minoxidil Dries"
+      ]
+    ]
+  }
 }

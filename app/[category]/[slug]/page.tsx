@@ -31,9 +31,10 @@ export async function generateMetadata({
   const post = JSON.parse(fs.readFileSync(postPath, 'utf8'));
   if (post.category !== category) return {};
 
+  const seoTitle = post.seoTitle || post.title;
   const description =
     post.excerpt?.substring(0, 158) ||
-    `Complete US guide on ${post.title}. Learn how Minoxidil works for hair and beard growth with You Minox.`;
+    `Complete US clinical guide on ${post.title}. Learn how Minoxidil works for hair and beard growth with You Minox.`;
 
   const imageUrl = post.featuredImage
     ? post.featuredImage.startsWith('/')
@@ -42,13 +43,13 @@ export async function generateMetadata({
     : 'https://minoxidil-usa.com/images/brand/you-minox.webp';
 
   return {
-    title: post.title,
+    title: seoTitle,
     description,
     alternates: {
       canonical: `https://minoxidil-usa.com/${category}/${slug}/`,
     },
     openGraph: {
-      title: post.title,
+      title: seoTitle,
       description,
       url: `https://minoxidil-usa.com/${category}/${slug}/`,
       type: 'article',
@@ -66,7 +67,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
+      title: seoTitle,
       description,
       images: [imageUrl],
     },
@@ -75,7 +76,7 @@ export async function generateMetadata({
 
 /**
  * Splits article HTML after the 2nd <h2> section so we can place a high-viewability
- * mid-article AdSense unit right in the middle of the reading experience.
+ * mid-article AdSense unit and Clinical Comparison Table right in the middle of the reading experience.
  */
 function splitContentForMidAd(html: string): [string, string] {
   const h2Matches = Array.from(html.matchAll(/<h2[^>]*>/gi));
@@ -84,6 +85,14 @@ function splitContentForMidAd(html: string): [string, string] {
     return [html.slice(0, splitIdx), html.slice(splitIdx)];
   }
   return [html, ''];
+}
+
+function hashSlug(str: string): number {
+  let h = 0;
+  for (let i = 0; i < str.length; i++) {
+    h = (h * 31 + str.charCodeAt(i)) >>> 0;
+  }
+  return h;
 }
 
 export default async function ArticlePage({
@@ -99,15 +108,49 @@ export default async function ArticlePage({
   const post = JSON.parse(fs.readFileSync(postPath, 'utf8'));
   if (post.category !== category) return notFound();
 
-  // Read index for related & sidebar trending articles
+  // Smart Internal Linking: prioritize Search Console Power Pages & High-Impression Guides
   const indexPath = path.join(process.cwd(), 'content', 'index.json');
   let relatedPosts: any[] = [];
   let sidebarPosts: any[] = [];
+  let powerHubPosts: any[] = [];
+
   if (fs.existsSync(indexPath)) {
     const allPosts = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
-    const sameCategory = allPosts.filter((p: any) => p.category === category && p.slug !== slug);
-    relatedPosts = sameCategory.slice(0, 4);
-    sidebarPosts = sameCategory.slice(4, 9);
+    const seed = hashSlug(slug);
+
+    // Sort same-category posts by Power Page & GSC impressions
+    const sameCategory = allPosts
+      .filter((p: any) => p.category === category && p.slug !== slug)
+      .sort((a: any, b: any) => {
+        const scoreA = (a.isPowerPage ? 5000 : 0) + (a.gscImpressions || 0);
+        const scoreB = (b.isPowerPage ? 5000 : 0) + (b.gscImpressions || 0);
+        return scoreB - scoreA;
+      });
+
+    // Top pool of category power pages rotated deterministically by slug seed
+    const catPool = sameCategory.slice(0, Math.min(20, sameCategory.length));
+    const startIdx = catPool.length > 0 ? seed % catPool.length : 0;
+    const rotatedCat: any[] = [];
+    for (let i = 0; i < catPool.length; i++) {
+      rotatedCat.push(catPool[(startIdx + i) % catPool.length]);
+    }
+
+    sidebarPosts = rotatedCat.slice(0, 5);
+    relatedPosts = rotatedCat.slice(5, 9);
+    if (relatedPosts.length < 4) {
+      relatedPosts = sameCategory.slice(0, 4);
+    }
+
+    // Cross-category Power Hub (top 65 GSC Power Pages across the entire site)
+    const allPowerPages = allPosts.filter(
+      (p: any) => p.isPowerPage && p.slug !== slug
+    );
+    if (allPowerPages.length > 0) {
+      const hubStart = seed % allPowerPages.length;
+      for (let i = 0; i < Math.min(6, allPowerPages.length); i++) {
+        powerHubPosts.push(allPowerPages[(hubStart + i * 3) % allPowerPages.length]);
+      }
+    }
   }
 
   const imageUrl = post.featuredImage
@@ -119,13 +162,15 @@ export default async function ArticlePage({
   const [firstHalfContent, secondHalfContent] = splitContentForMidAd(post.content || '');
   const toc: Array<{ id: string; text: string }> = post.toc || [];
   const faqs: Array<{ question: string; answer: string }> = post.faqs || [];
+  const clinicalTable: { title: string; headers: string[]; rows: string[][] } | undefined =
+    post.clinicalTable;
 
   // Combined Article + FAQPage Schema.org JSON-LD for Google Rich Results
   const graphSchemas: any[] = [
     {
       '@type': 'Article',
       '@id': `https://minoxidil-usa.com/${category}/${slug}/#article`,
-      headline: post.title,
+      headline: post.seoTitle || post.title,
       description: post.excerpt,
       image: [imageUrl],
       datePublished: post.date,
@@ -206,7 +251,7 @@ export default async function ArticlePage({
                 </span>
               )}
               <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full">
-                ✓ Medically Reviewed Guide
+                ✓ Medically Reviewed Guide (USA)
               </span>
             </div>
 
@@ -277,6 +322,19 @@ export default async function ArticlePage({
           {/* AdSense Slot #1: Above the Fold / Below Featured Image (Highest Viewability & CPC) */}
           <AdSenseUnit format="auto" minHeight="250px" label="Sponsored Advertisement" />
 
+          {/* Clinical Quick Answer Box (Targets Google Position #0 Featured Snippet) */}
+          {post.quickAnswer && (
+            <div className="my-6 bg-gradient-to-br from-emerald-50/90 via-white to-primary-50/60 border-l-4 border-primary-600 rounded-2xl p-5 sm:p-6 shadow-sm">
+              <div className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-primary-800 mb-2">
+                <span>⚡</span>
+                <span>Clinical Quick Answer (Key Takeaway)</span>
+              </div>
+              <p className="text-slate-800 text-sm sm:text-base leading-relaxed font-medium">
+                {post.quickAnswer}
+              </p>
+            </div>
+          )}
+
           {/* Interactive Table of Contents (Enables Google Jump-to Sitelinks in SERPs) */}
           {toc.length >= 2 && (
             <nav
@@ -305,9 +363,54 @@ export default async function ArticlePage({
 
           {/* Article Body Part 1 */}
           <div
-            className="article-content prose prose-lg max-w-none bg-white p-6 sm:p-10 rounded-t-2xl border border-b-0 border-slate-200/80 shadow-sm"
+            className={`article-content prose prose-lg max-w-none bg-white p-6 sm:p-10 ${
+              secondHalfContent ? 'rounded-t-2xl border-b-0' : 'rounded-2xl mb-8'
+            } border border-slate-200/80 shadow-sm`}
             dangerouslySetInnerHTML={{ __html: firstHalfContent }}
           />
+
+          {/* Clinical Data Table (Captures Google Table Snippets & Increases Time on Page) */}
+          {clinicalTable && (
+            <div className="bg-white px-6 sm:px-10 py-4 border-x border-slate-200/80">
+              <div className="rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                <div className="bg-slate-900 text-white px-4 py-3 text-sm sm:text-base font-extrabold flex items-center justify-between">
+                  <span>📊 {clinicalTable.title}</span>
+                  <span className="text-[11px] font-semibold text-primary-300 uppercase tracking-wider">
+                    US Clinical Standard
+                  </span>
+                </div>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left border-collapse text-xs sm:text-sm">
+                    <thead>
+                      <tr className="bg-slate-100 text-slate-800 border-b border-slate-200">
+                        {clinicalTable.headers.map((h, i) => (
+                          <th key={i} className="py-3 px-4 font-bold">
+                            {h}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200/80">
+                      {clinicalTable.rows.map((row, rIdx) => (
+                        <tr key={rIdx} className="hover:bg-slate-50/80">
+                          {row.map((cell, cIdx) => (
+                            <td
+                              key={cIdx}
+                              className={`py-3 px-4 ${
+                                cIdx === 0 ? 'font-bold text-slate-900' : 'text-slate-700'
+                              }`}
+                            >
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* AdSense Slot #2: Mid-Article In-Content Placement */}
           {secondHalfContent && (
@@ -321,10 +424,40 @@ export default async function ArticlePage({
                 />
               </div>
               <div
-                className="article-content prose prose-lg max-w-none bg-white p-6 sm:p-10 pt-4 rounded-b-2xl border border-t-0 border-slate-200/80 shadow-sm mb-10"
+                className="article-content prose prose-lg max-w-none bg-white p-6 sm:p-10 pt-4 rounded-b-2xl border border-t-0 border-slate-200/80 shadow-sm mb-8"
                 dangerouslySetInnerHTML={{ __html: secondHalfContent }}
               />
             </>
+          )}
+
+          {/* Visible FAQ Accordion Section (Matches FAQPage Schema 100%) */}
+          {faqs.length > 0 && (
+            <section
+              aria-label="Frequently Asked Questions"
+              className="my-8 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-sm"
+            >
+              <div className="flex items-center gap-2.5 mb-5">
+                <span className="text-2xl">❓</span>
+                <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
+                  Frequently Asked Questions (Clinical FAQ)
+                </h2>
+              </div>
+              <div className="space-y-4">
+                {faqs.map((faq, idx) => (
+                  <div
+                    key={idx}
+                    className="p-4 sm:p-5 rounded-xl bg-slate-50 border border-slate-200/80"
+                  >
+                    <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2">
+                      {faq.question}
+                    </h3>
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
           )}
 
           {/* You Minox Official Brand Recommendation Box */}
@@ -332,6 +465,35 @@ export default async function ArticlePage({
 
           {/* AdSense Slot #3: End of Article */}
           <AdSenseUnit format="auto" minHeight="280px" />
+
+          {/* Internal PageRank Hub: Links directly to Top Search Console Power Pages */}
+          {powerHubPosts.length > 0 && (
+            <section className="mt-10 bg-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-lg">
+              <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <h2 className="text-lg sm:text-xl font-extrabold text-white flex items-center gap-2">
+                  <span>🇺🇸</span>
+                  <span>Most Searched Minoxidil Clinical Guides in the USA</span>
+                </h2>
+                <span className="text-xs font-semibold text-primary-300 uppercase tracking-wider">
+                  Essential Reading
+                </span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {powerHubPosts.map((pp: any) => (
+                  <Link
+                    key={pp.slug}
+                    href={`/${pp.category}/${pp.slug}/`}
+                    className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors group"
+                  >
+                    <span className="text-primary-400 font-extrabold text-sm">→</span>
+                    <span className="text-xs sm:text-sm font-semibold text-slate-100 group-hover:text-primary-300 line-clamp-2 leading-snug">
+                      {pp.title}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
         </article>
 
         {/* Sticky Sidebar Column (4 cols) — High Desktop RPM + You Minox Funnel */}
@@ -373,11 +535,11 @@ export default async function ArticlePage({
             </a>
           </div>
 
-          {/* Trending in Category Box (Increases Pages/Session & Ad Impressions) */}
+          {/* Trending Power Pages in Category Box (Increases Pages/Session & Ad Impressions) */}
           {sidebarPosts.length > 0 && (
             <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm">
               <h3 className="text-lg font-extrabold text-slate-900 mb-4 pb-2 border-b border-slate-100">
-                🔥 Trending in {post.categoryName}
+                🔥 Most Read in {post.categoryName}
               </h3>
               <ul className="space-y-4">
                 {sidebarPosts.map((sp: any) => (

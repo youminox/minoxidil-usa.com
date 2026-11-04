@@ -50,6 +50,45 @@
     {
       "question": "Can I adjust the frequency based on my hair growth progress?",
       "answer": "Some users may consider adjusting the frequency of Minoxidil application based on their progress. Its important to note that any changes in application frequency should be discussed with a healthcare professional. While some individuals might be tempted to increase the frequency to speed up results, this can lead to increased side effects such as scalp irritation. Conversely, r"
+    },
+    {
+      "question": "When can I sleep after applying Minoxidil at night?",
+      "answer": "Wait at least 45 to 60 minutes after applying Minoxidil before going to bed. Cream-based formulas like You Minox absorb faster than greasy propylene-glycol liquids, reducing pillowcase transfer."
     }
-  ]
+  ],
+  "gscImpressions": 942,
+  "gscClicks": 1,
+  "isPowerPage": true,
+  "seoTitle": "Daily Routine: How Often to Apply Minoxidil for Optimal Results (Wait Times, Shower & Sleep Rules)",
+  "quickAnswer": " Always apply Minoxidil to a completely dry scalp or face after showering, and wait at least 4 hours before shampooing, swimming, or sweating heavily so over 75% of the active ingredient absorbs. Wait 20–30 minutes before applying styling products or moisturizers, and allow 45–60 minutes before sleeping so Minoxidil does not transfer to your pillowcase.",
+  "clinicalTable": {
+    "title": "Clinical Wait-Time Schedule After Applying Minoxidil",
+    "headers": [
+      "Daily Activity / Product",
+      "Minimum Wait Time",
+      "Why It Matters"
+    ],
+    "rows": [
+      [
+        "Applying Moisturizer / Styling Gel",
+        "20 – 30 Minutes",
+        "Prevents Dilution of Follicular Absorption"
+      ],
+      [
+        "Going to Sleep / Pillow Contact",
+        "45 – 60 Minutes",
+        "Prevents Facial Transfer & Unwanted Hair"
+      ],
+      [
+        "Showering / Shampooing Hair",
+        "4 Hours (Ideal) / 2 Hours (Min)",
+        "Ensures >75% Transfollicular Uptake"
+      ],
+      [
+        "Applying Minoxidil After Shower",
+        "Wait Until Scalp is 100% Dry",
+        "Wet Skin Increases Systemic Irritation"
+      ]
+    ]
+  }
 }
