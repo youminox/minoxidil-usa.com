@@ -179,7 +179,12 @@ export default async function ArticlePage({
       author: {
         '@type': 'Person',
         name: 'Charlie Lingan',
-        url: 'https://youminox.com/',
+        url: 'https://charlielingan.com/en',
+        sameAs: [
+          'https://charlielingan.com/en',
+          'https://charlielingan.com/es',
+          'https://youminox.com/',
+        ],
       },
       publisher: {
         '@type': 'Organization',
@@ -271,7 +276,16 @@ export default async function ArticlePage({
                 />
                 <div>
                   <div className="font-bold text-slate-900">
-                    By Charlie Lingan &bull;{' '}
+                    By{' '}
+                    <a
+                      href="https://charlielingan.com/en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-900 hover:text-primary-700 hover:underline"
+                    >
+                      Charlie Lingan
+                    </a>{' '}
+                    &bull;{' '}
                     <a
                       href="https://youminox.com/"
                       target="_blank"

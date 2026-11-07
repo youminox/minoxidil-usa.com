@@ -26,19 +26,38 @@ export default function YouMinoxSpotlight({ variant = 'home' }: YouMinoxSpotligh
               Looking for Gentle, Cream-Based Minoxidil for Hair &amp; Beard?
             </h3>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
-              This guide is proudly brought to you by <strong className="text-white">You Minox</strong>. Discover why over 600,000+ followers trust You Minox cream formulations to stimulate thicker beard and scalp growth without harsh alcohol dryness.
+              This guide is proudly brought to you by <strong className="text-white">You Minox</strong>, founded by{' '}
+              <a
+                href="https://charlielingan.com/en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-300 hover:text-primary-200 underline font-semibold"
+              >
+                Charlie Lingan
+              </a>
+              . Discover why over 600,000+ followers trust You Minox cream formulations to stimulate thicker beard and scalp growth without harsh alcohol dryness.
             </p>
-            <a
-              href="https://youminox.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary-500 hover:bg-primary-400 text-slate-950 font-extrabold px-6 py-3 rounded-xl text-sm transition-all shadow-lg hover:scale-[1.02]"
-            >
-              Visit Official YouMinox.com
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-3">
+              <a
+                href="https://youminox.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-primary-500 hover:bg-primary-400 text-slate-950 font-extrabold px-6 py-3 rounded-xl text-sm transition-all shadow-lg hover:scale-[1.02]"
+              >
+                Visit Official YouMinox.com
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+              <a
+                href="https://charlielingan.com/en/emprendedor/how-i-created-you-minox-number-1-cream-minoxidil-in-peru"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold px-5 py-3 rounded-xl text-xs sm:text-sm transition-all"
+              >
+                Read Founder&apos;s Story (CharlieLingan.com) &rarr;
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -194,7 +213,16 @@ export default function YouMinoxSpotlight({ variant = 'home' }: YouMinoxSpotligh
                   <span className="text-xs font-bold uppercase tracking-wider text-primary-400">
                     Founder&apos;s Message
                   </span>
-                  <h3 className="text-xl font-extrabold text-white">Charlie Lingan</h3>
+                  <h3 className="text-xl font-extrabold text-white">
+                    <a
+                      href="https://charlielingan.com/en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-primary-300 transition-colors"
+                    >
+                      Charlie Lingan
+                    </a>
+                  </h3>
                   <p className="text-xs text-slate-400">
                     Creator of Minoxidil-USA.com &amp; You Minox
                   </p>
@@ -206,9 +234,9 @@ export default function YouMinoxSpotlight({ variant = 'home' }: YouMinoxSpotligh
               </blockquote>
             </div>
 
-            <div className="bg-slate-900/90 rounded-2xl p-4 border border-white/10">
-              <div className="text-xs font-semibold text-slate-400 mb-1">
-                Official Brand Ecosystem
+            <div className="bg-slate-900/90 rounded-2xl p-4 border border-white/10 space-y-2.5">
+              <div className="text-xs font-semibold text-slate-400">
+                Official Brand Ecosystem &amp; Founder Blog
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-sm font-bold text-white">You Minox Official Store</span>
@@ -219,6 +247,17 @@ export default function YouMinoxSpotlight({ variant = 'home' }: YouMinoxSpotligh
                   className="text-xs font-bold text-primary-400 hover:text-primary-300 underline"
                 >
                   https://youminox.com &rarr;
+                </a>
+              </div>
+              <div className="flex items-center justify-between pt-2 border-t border-white/10">
+                <span className="text-xs sm:text-sm font-bold text-slate-200">Charlie Lingan Official Site</span>
+                <a
+                  href="https://charlielingan.com/en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-bold text-primary-400 hover:text-primary-300 underline"
+                >
+                  charlielingan.com &rarr;
                 </a>
               </div>
             </div>
