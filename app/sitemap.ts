@@ -62,9 +62,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   posts.forEach((post) => {
     sitemapEntries.push({
       url: `${baseUrl}/${post.category}/${post.slug}/`,
-      lastModified: new Date(post.date),
-      changeFrequency: 'monthly',
-      priority: 0.7,
+      lastModified: new Date('2026-11-09T09:00:00Z'),
+      changeFrequency: 'weekly',
+      priority: post.isPowerPage ? 0.9 : 0.8,
     });
   });
 

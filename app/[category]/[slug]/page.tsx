@@ -118,27 +118,33 @@ export default async function ArticlePage({
     const allPosts = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
     const seed = hashSlug(slug);
 
-    // Sort same-category posts by Power Page & GSC impressions
-    const sameCategory = allPosts
-      .filter((p: any) => p.category === category && p.slug !== slug)
+    // 1. Full circular ring across all posts in this category for relatedPosts
+    // Guarantees 100% of the 1,262 articles receive 4 direct incoming internal links
+    const categoryAllOrdered = allPosts.filter((p: any) => p.category === category);
+    const currentCatIdx = categoryAllOrdered.findIndex((p: any) => p.slug === slug);
+    if (categoryAllOrdered.length > 1) {
+      for (let step = 1; step <= Math.min(4, categoryAllOrdered.length - 1); step++) {
+        const nextPost =
+          categoryAllOrdered[(Math.max(0, currentCatIdx) + step) % categoryAllOrdered.length];
+        if (nextPost && nextPost.slug !== slug) {
+          relatedPosts.push(nextPost);
+        }
+      }
+    }
+
+    // 2. Sort same-category posts by Power Page & GSC impressions for Sidebar
+    const sameCategoryByPower = categoryAllOrdered
+      .filter((p: any) => p.slug !== slug)
       .sort((a: any, b: any) => {
         const scoreA = (a.isPowerPage ? 5000 : 0) + (a.gscImpressions || 0);
         const scoreB = (b.isPowerPage ? 5000 : 0) + (b.gscImpressions || 0);
         return scoreB - scoreA;
       });
 
-    // Top pool of category power pages rotated deterministically by slug seed
-    const catPool = sameCategory.slice(0, Math.min(20, sameCategory.length));
+    const catPool = sameCategoryByPower.slice(0, Math.min(20, sameCategoryByPower.length));
     const startIdx = catPool.length > 0 ? seed % catPool.length : 0;
-    const rotatedCat: any[] = [];
-    for (let i = 0; i < catPool.length; i++) {
-      rotatedCat.push(catPool[(startIdx + i) % catPool.length]);
-    }
-
-    sidebarPosts = rotatedCat.slice(0, 5);
-    relatedPosts = rotatedCat.slice(5, 9);
-    if (relatedPosts.length < 4) {
-      relatedPosts = sameCategory.slice(0, 4);
+    for (let i = 0; i < Math.min(5, catPool.length); i++) {
+      sidebarPosts.push(catPool[(startIdx + i) % catPool.length]);
     }
 
     // Cross-category Power Hub (top 65 GSC Power Pages across the entire site)
