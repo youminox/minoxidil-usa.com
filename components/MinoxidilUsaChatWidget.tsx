@@ -397,15 +397,15 @@ export default function MinoxidilUsaChatWidget() {
                 />
               </div>
               <div className="min-w-0">
-                <div className="flex items-center gap-1.5">
+                <div className="flex items-center gap-2">
                   <h3 className="font-display font-extrabold text-[15px] leading-tight truncate text-white">
-                    Minoxidil USA AI Advisor
+                    Minoxidil USA AI
                   </h3>
-                  <span className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-emerald-300 text-slate-950 shrink-0">
+                  <span className="inline-flex items-center whitespace-nowrap shrink-0 leading-none text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-emerald-300 text-slate-950">
                     Live
                   </span>
                 </div>
-                <p className="text-xs text-emerald-100 truncate">
+                <p className="text-xs text-emerald-100 truncate mt-0.5">
                   1,267+ Clinical Guides &bull; Powered by You Minox
                 </p>
               </div>
