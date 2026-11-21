@@ -3,6 +3,7 @@ import { Inter, Outfit } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import MinoxidilUsaChatWidget from '@/components/MinoxidilUsaChatWidget';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -79,6 +80,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow pt-[96px]">{children}</main>
         <Footer />
+        <MinoxidilUsaChatWidget />
       </body>
     </html>
   );
