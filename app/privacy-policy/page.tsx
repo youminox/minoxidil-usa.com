@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import AmazonAffiliateBox from '@/components/AmazonAffiliateBox';
+import { getAmazonContextForCategory } from '@/lib/amazon';
 import { getStaticPage } from '@/lib/posts';
 
 export const metadata: Metadata = {
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   const page = getStaticPage('privacy-policy');
+  const amazonContext = getAmazonContextForCategory('legal');
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
@@ -25,6 +28,12 @@ export default function PrivacyPolicyPage() {
           }}
         />
       </div>
+      <AmazonAffiliateBox
+        variant="inline"
+        sectionTitle={amazonContext.sectionTitle}
+        sectionSubtitle={amazonContext.sectionSubtitle}
+        products={amazonContext.products}
+      />
     </div>
   );
 }

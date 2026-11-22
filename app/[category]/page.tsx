@@ -6,6 +6,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import SearchBar from '@/components/SearchBar';
 import YouMinoxSpotlight from '@/components/YouMinoxSpotlight';
 import AdSenseUnit from '@/components/AdSenseUnit';
+import AmazonAffiliateBox from '@/components/AmazonAffiliateBox';
+import { getAmazonContextForCategory } from '@/lib/amazon';
 
 export async function generateStaticParams() {
   const filePath = path.join(process.cwd(), 'content', 'categories.json');
@@ -68,6 +70,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }
 
+  const amazonContext = getAmazonContextForCategory(category);
+
   return (
     <div className="min-h-screen pb-16">
       {/* Category Hero Header */}
@@ -108,6 +112,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
 
         <div className="mt-16">
           <YouMinoxSpotlight variant="article" />
+          <AmazonAffiliateBox
+            variant="showcase"
+            sectionTitle={amazonContext.sectionTitle}
+            sectionSubtitle={amazonContext.sectionSubtitle}
+            products={amazonContext.products}
+          />
         </div>
       </div>
     </div>

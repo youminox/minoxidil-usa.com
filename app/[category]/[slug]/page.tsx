@@ -6,6 +6,8 @@ import ArticleCard from '@/components/ArticleCard';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import YouMinoxSpotlight from '@/components/YouMinoxSpotlight';
 import AdSenseUnit from '@/components/AdSenseUnit';
+import AmazonAffiliateBox from '@/components/AmazonAffiliateBox';
+import { getAmazonContextForArticle } from '@/lib/amazon';
 
 export async function generateStaticParams() {
   const filePath = path.join(process.cwd(), 'content', 'index.json');
@@ -170,6 +172,11 @@ export default async function ArticlePage({
   const faqs: Array<{ question: string; answer: string }> = post.faqs || [];
   const clinicalTable: { title: string; headers: string[]; rows: string[][] } | undefined =
     post.clinicalTable;
+  const amazonContext = getAmazonContextForArticle({
+    slug: post.slug,
+    title: post.title,
+    category: post.category,
+  });
 
   // Combined Article + FAQPage Schema.org JSON-LD for Google Rich Results
   const graphSchemas: any[] = [
@@ -432,6 +439,20 @@ export default async function ArticlePage({
             </div>
           )}
 
+          {/* Mid-Article Men's Grooming Amazon Affiliate Recommendation */}
+          <div
+            className={`bg-white px-6 sm:px-10 py-2 ${
+              secondHalfContent ? 'border-x border-slate-200/80' : 'rounded-2xl border border-slate-200/80 mb-8'
+            }`}
+          >
+            <AmazonAffiliateBox
+              variant="inline"
+              sectionTitle={amazonContext.sectionTitle}
+              sectionSubtitle={amazonContext.sectionSubtitle}
+              products={amazonContext.products}
+            />
+          </div>
+
           {/* AdSense Slot #2: Mid-Article In-Content Placement */}
           {secondHalfContent && (
             <>
@@ -482,6 +503,14 @@ export default async function ArticlePage({
 
           {/* You Minox Official Brand Recommendation Box */}
           <YouMinoxSpotlight variant="article" />
+
+          {/* End-of-Article 3-Product Men's Grooming Amazon Showcase */}
+          <AmazonAffiliateBox
+            variant="showcase"
+            sectionTitle={amazonContext.sectionTitle}
+            sectionSubtitle={amazonContext.sectionSubtitle}
+            products={amazonContext.products}
+          />
 
           {/* AdSense Slot #3: End of Article */}
           <AdSenseUnit format="auto" minHeight="280px" />
@@ -554,6 +583,14 @@ export default async function ArticlePage({
               Shop at YouMinox.com ↗
             </a>
           </div>
+
+          {/* Sidebar Men's Grooming Amazon Affiliate Box */}
+          <AmazonAffiliateBox
+            variant="sidebar"
+            sectionTitle={amazonContext.sectionTitle}
+            sectionSubtitle={amazonContext.sectionSubtitle}
+            products={amazonContext.products}
+          />
 
           {/* Trending Power Pages in Category Box (Increases Pages/Session & Ad Impressions) */}
           {sidebarPosts.length > 0 && (

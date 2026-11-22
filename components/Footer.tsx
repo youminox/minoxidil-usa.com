@@ -150,9 +150,14 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Medical Disclaimer */}
-        <div className="py-6 border-b border-slate-900 text-xs text-slate-500 leading-relaxed">
-          <strong>Medical Disclaimer:</strong> The content published on Minoxidil-USA.com is for informational and educational purposes only and is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified physician or dermatologist with any questions regarding hair loss treatments or medical conditions.
+        {/* Medical & Amazon Affiliate Disclaimers */}
+        <div className="py-6 border-b border-slate-900 text-xs text-slate-500 leading-relaxed space-y-2">
+          <p>
+            <strong>Medical Disclaimer:</strong> The content published on Minoxidil-USA.com is for informational and educational purposes only and is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified physician or dermatologist with any questions regarding hair loss treatments or medical conditions.
+          </p>
+          <p>
+            <strong>Amazon Affiliate Disclosure:</strong> As an Amazon Associate, Minoxidil-USA.com earns from qualifying purchases at no additional cost to you (Amazon.com Tag: <code>minoxidilusa-20</code> &bull; Amazon.es Tag: <code>minoxidilusa-21</code>).
+          </p>
         </div>
 
         {/* Bottom Bar */}

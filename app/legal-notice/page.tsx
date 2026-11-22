@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import AmazonAffiliateBox from '@/components/AmazonAffiliateBox';
+import { getAmazonContextForCategory } from '@/lib/amazon';
 import { getStaticPage } from '@/lib/posts';
 
 export const metadata: Metadata = {
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
 
 export default function LegalNoticePage() {
   const page = getStaticPage('legal-notice');
+  const amazonContext = getAmazonContextForCategory('legal');
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
@@ -24,7 +27,24 @@ export default function LegalNoticePage() {
             __html: page?.content || '<p>Legal Notice for Minoxidil USA.</p>',
           }}
         />
+        <section className="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h2 className="text-xl font-extrabold text-slate-900">
+            Amazon Associates Program Disclosure
+          </h2>
+          <p className="mt-2 text-sm text-slate-700 leading-relaxed">
+            As an Amazon Associate, <strong>Minoxidil USA</strong> (minoxidil-usa.com) earns from
+            qualifying purchases at no extra cost to you. Some links published in our clinical
+            guides and product reviews direct readers to Amazon.com (Tracking ID:{' '}
+            <code>minoxidilusa-20</code>) or Amazon.es (Tracking ID: <code>minoxidilusa-21</code>).
+          </p>
+        </section>
       </div>
+      <AmazonAffiliateBox
+        variant="inline"
+        sectionTitle={amazonContext.sectionTitle}
+        sectionSubtitle={amazonContext.sectionSubtitle}
+        products={amazonContext.products}
+      />
     </div>
   );
 }

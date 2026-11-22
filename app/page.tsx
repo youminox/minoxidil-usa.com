@@ -4,6 +4,8 @@ import SearchBar from '@/components/SearchBar';
 import InteractiveCategoryExplorer from '@/components/InteractiveCategoryExplorer';
 import YouMinoxSpotlight from '@/components/YouMinoxSpotlight';
 import AdSenseUnit from '@/components/AdSenseUnit';
+import AmazonAffiliateBox from '@/components/AmazonAffiliateBox';
+import { getAmazonContextForCategory } from '@/lib/amazon';
 import { getAllPosts, getCategories, Post } from '@/lib/posts';
 
 const CATEGORY_META: Record<string, { icon: string; badge: string }> = {
@@ -23,6 +25,7 @@ export default function HomePage() {
   const categories = getCategories();
 
   const editorsPicks = posts.slice(0, 6);
+  const homeAmazon = getAmazonContextForCategory('home');
   const topGscPowerPages = [...posts]
     .sort((a: any, b: any) => {
       const scoreA = (a.gscClicks || 0) * 100 + (a.gscImpressions || 0);
@@ -344,6 +347,15 @@ export default function HomePage() {
             {beardGuides.map((post) => (
               <ArticleCard key={post.slug} post={post} />
             ))}
+          </div>
+
+          <div className="mt-14">
+            <AmazonAffiliateBox
+              variant="showcase"
+              sectionTitle={homeAmazon.sectionTitle}
+              sectionSubtitle={homeAmazon.sectionSubtitle}
+              products={homeAmazon.products}
+            />
           </div>
         </div>
       </section>
