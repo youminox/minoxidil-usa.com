@@ -36,3 +36,4 @@ next-env.d.ts
 # WordPress export (don't commit to repo)
 *.xml
 data/
+scripts/.cache/

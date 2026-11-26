@@ -9,8 +9,6 @@ export interface AmazonProductRecommendation {
   title: string;
   subtitle: string;
   features: string[];
-  rating: string;
-  reviewsCount: string;
   categoryType:
     | 'microneedling'
     | 'shampoo'
@@ -108,8 +106,6 @@ export const CATALOG = {
       'Boosts follicular blood flow and activates SULT1A1 enzymes for up to 3x better regrowth',
       'Vertical stamping action prevents micro-tears on the scalp and jawline',
     ],
-    rating: '4.7',
-    reviewsCount: '6,800+',
     categoryType: 'microneedling',
     queryUS: 'adjustable titanium microneedle derma stamp hair beard growth men',
     queryES: 'derma stamp ajustable titanio capilar barba hombre',
@@ -127,8 +123,6 @@ export const CATALOG = {
       'Ergonomic non-slip masculine grip with protective travel & sanitizing storage case',
       'Pairs seamlessly with cream-based or topical 5% Minoxidil routines (wait 24h after rolling)',
     ],
-    rating: '4.6',
-    reviewsCount: '14,200+',
     categoryType: 'microneedling',
     queryUS: '0.5mm titanium derma roller beard hair growth men kit',
     queryES: 'derma roller 0.5mm titanio barba pelo hombre',
@@ -146,8 +140,6 @@ export const CATALOG = {
       'Used 2–3 times weekly alongside Minoxidil as part of the "Big 3" hair restoration protocol',
       'Deeply cleanses sebum and residue so topical treatments absorb cleanly into follicles',
     ],
-    rating: '4.7',
-    reviewsCount: '92,400+',
     categoryType: 'shampoo',
     asinUS: 'B00AINMFAC',
     queryUS: 'Nizoral Anti-Dandruff Shampoo 1% Ketoconazole',
@@ -166,8 +158,6 @@ export const CATALOG = {
       '100% Sulfate-free & Paraben-free: gentle enough for daily washing before Minoxidil',
       'Adds immediate volume and structural fullness to fine or miniaturized hair',
     ],
-    rating: '4.6',
-    reviewsCount: '19,500+',
     categoryType: 'shampoo',
     queryUS: 'mens biotin saw palmetto dht blocker thickening shampoo sulfate free',
     queryES: 'champu biotina saw palmetto anticaida hombre sin sulfatos',
@@ -185,8 +175,6 @@ export const CATALOG = {
       'Daily 4-minute mechanical massage clinically shown to increase dermal papilla thickness',
       'Waterproof one-piece design ideal for shower lathering or dry scalp stimulation',
     ],
-    rating: '4.8',
-    reviewsCount: '48,000+',
     categoryType: 'shampoo',
     queryUS: 'mens silicone scalp massager shampoo brush hair growth',
     queryES: 'masajeador cuero cabelludo silicona cepillo champu hombre',
@@ -204,8 +192,6 @@ export const CATALOG = {
       'Allows topical Minoxidil to reach the skin beneath your beard instead of getting trapped in long hair',
       'Lithium-ion rechargeable battery with waterproof rinseable attachments',
     ],
-    rating: '4.7',
-    reviewsCount: '84,000+',
     categoryType: 'beard',
     queryUS: 'Philips Norelco Multigroom beard trimmer men kit',
     queryES: 'Philips recortadora barba precision hombre',
@@ -223,8 +209,6 @@ export const CATALOG = {
       'Anti-static dual-tooth wooden pocket comb prevents snagging or pulling fragile vellus hairs',
       'Improves blood circulation along the jawline and mustache connector zones',
     ],
-    rating: '4.7',
-    reviewsCount: '21,300+',
     categoryType: 'beard',
     queryUS: '100% boar bristle beard brush and wooden comb set men',
     queryES: 'cepillo barba cerdas jabali peine madera hombre',
@@ -242,8 +226,6 @@ export const CATALOG = {
       'Rich in ricinoleic acid and omega-6/9 fatty acids to prevent beard and hair breakage',
       'Includes precision glass dropper for targeted scalp, temple, and beard hydration',
     ],
-    rating: '4.6',
-    reviewsCount: '34,700+',
     categoryType: 'beard',
     queryUS: 'rosemary mint jamaican black castor oil hair beard growth men',
     queryES: 'aceite romero y ricino negro crecimiento cabello barba hombre',
@@ -261,8 +243,6 @@ export const CATALOG = {
       'Standardized Saw Palmetto berry extract + Horsetail silica to support thick hair density',
       'Made in the USA in GMP-certified facilities for daily men’s hair and beard wellness',
     ],
-    rating: '4.6',
-    reviewsCount: '15,900+',
     categoryType: 'supplement',
     queryUS: 'mens hair beard growth vitamins biotin 10000 mcg saw palmetto zinc',
     queryES: 'vitaminas biotina 10000 mcg saw palmetto zinc pelo barba hombre',
@@ -280,8 +260,6 @@ export const CATALOG = {
       'Lightweight, non-greasy matte finish engineered for men’s facial skin and jawline',
       'Fragrance-free & non-comedogenic: zero DHT-blocking harshness for beard growers',
     ],
-    rating: '4.8',
-    reviewsCount: '67,500+',
     categoryType: 'skincare',
     queryUS: 'mens ceramide hyaluronic acid facial moisturizer oil free non comedogenic',
     queryES: 'crema hidratante facial ceramidas acido hialuronico hombre',
@@ -299,8 +277,6 @@ export const CATALOG = {
       'Clear graduated mL measurement scale ensures an exact 1 mL clinical dose every time',
       'Prevents messy forehead dripping and keeps hands clean during morning and night applications',
     ],
-    rating: '4.6',
-    reviewsCount: '5,400+',
     categoryType: 'applicator',
     queryUS: 'scalp applicator comb graduated 1ml minoxidil hair oil applicator men',
     queryES: 'aplicador cuero cabelludo peine dosificador 1ml locion capilar',
@@ -318,8 +294,6 @@ export const CATALOG = {
       'Does not strip natural moisture from your scalp or beard like rough cotton pillowcases',
       'Machine-washable envelope closure in masculine charcoal gray and navy blue',
     ],
-    rating: '4.7',
-    reviewsCount: '41,000+',
     categoryType: 'applicator',
     queryUS: 'mens cooling satin pillowcase 2 pack dark gray hair protection',
     queryES: 'funda almohada saten gris oscuro pack 2 cuidado cabello barba',
@@ -328,7 +302,7 @@ export const CATALOG = {
 
   MENS_5PCT_FOAM_KIT: {
     id: 'mens-5pct-topical-foam-kit',
-    badge: '⭐ Top-Rated on Amazon USA',
+    badge: ' Top-Rated on Amazon USA',
     title: 'Men’s 5% Minoxidil Unscented Topical Aerosol Foam (3-Month & 6-Month Supply)',
     subtitle:
       'Fast-drying propylene-glycol-free 5% topical foam option on Amazon for men comparing foam, liquid, and cream regrowth formats.',
@@ -337,8 +311,6 @@ export const CATALOG = {
       'Aerosol foam format dries in under 15 minutes with minimal greasy residue',
       'Available in multi-month value packs with Prime delivery',
     ],
-    rating: '4.6',
-    reviewsCount: '38,900+',
     categoryType: 'foam',
     queryUS: 'mens 5% minoxidil unscented foam hair regrowth 3 month supply',
     queryES: 'minoxidil 5% espuma capilar hombre tratamiento',
@@ -562,7 +534,7 @@ export function getAmazonContextForCategory(categorySlug: string): AmazonPageCon
     case 'comparison':
     case 'reviews':
       return {
-        sectionTitle: '⭐ Highest-Rated Men’s Hair Regrowth Products & Kits on Amazon',
+        sectionTitle: ' Highest-Rated Men’s Hair Regrowth Products & Kits on Amazon',
         sectionSubtitle:
           'Compare top-selling topical foam kits, titanium microneedling stamps, and botanical growth oils.',
         products: [
